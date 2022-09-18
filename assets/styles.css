@@ -1,0 +1,161 @@
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url("./fonts/PlusJakartaSans-VariableFont_wght.ttf");
+    font-weight: 500;
+}
+
+:root {
+    --blue: hsl(219, 85%, 26%);
+    --red: hsl(1, 90%, 64%);
+
+    --vlgb: hsl(210, 60%, 98%);
+    --lgb1: hsl(211, 68%, 94%);
+    --lgb2: hsl(205, 33%, 90%);
+    --gb: hsl(219, 14%, 63%);
+    --dgb: hsl(219, 12%, 42%);
+    --vdgb: hsl(224, 21%, 14%);
+
+    --background: hsl(0, 100%, 100%);
+
+    --profile-pic-size: 50px;
+
+    --border-rad: 10px;
+
+    --fs: 16px;
+}
+
+html {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    font-size: var(--fs);
+    background-color: var(--vlgb);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family:'Plus Jakarta Sans';
+}
+
+a {
+    text-decoration: none;
+}
+
+#wrapper {
+    background-color: var(--background);
+    width: 100%;
+    max-width: 650px;
+    border-radius: var(--border-rad);
+    padding: 10px 25px;
+}
+
+#header-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header-not-container{
+    display: flex;
+    align-items: center;
+}
+
+#notification-counter {
+    background-color: var(--blue);
+    color: white;
+    font-weight: 800;
+    padding: 2px 10px;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+#header-row a {
+    color: var(--dgb)
+}
+
+#header-row > * {
+    text-align: center;
+}
+
+.single-notification {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--background);
+    border-radius: var(--border-rad);
+    margin: 7px 0;
+    padding: 20px 20px 10px 20px;
+    align-items: center;
+}
+
+.unread {
+    background-color: var(--vlgb) !important;
+}
+
+.single-notification img:not(.user-action-image) {
+    width: var(--profile-pic-size);
+    height: var(--profile-pic-size);
+    margin: 0 20px auto 0;
+}
+
+.details-container {
+    display: inline-block;
+}
+
+.details-container > * {
+    margin: 0;
+}
+
+.user-action-image {
+    margin-left: auto;
+    width: var(--profile-pic-size);
+    height: var(--profile-pic-size);
+}
+
+
+span {
+    color: var(--dgb);
+}
+
+.user-name {
+    font-weight: 800;
+    color: black;
+}
+
+.link-group {
+    font-weight: 800;
+    color: var(--blue)
+}
+
+.link-post {
+    font-weight: 800;
+    color: var(--dgb)
+}
+
+.user-action-date {
+    color: var(--gb);
+}
+
+.message-details {
+    border: 2px solid var(--lgb2);
+    border-radius:  5px;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.attribution {
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+#unread-symbol {
+    color: var(--red);
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.invis {
+    display: none;
+}

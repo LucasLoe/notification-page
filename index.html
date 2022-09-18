@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./assets/styles.css">
+  
+  <title>Frontend Mentor | Notifications page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="header-row">
+      <div id="header-not-container">
+        <h2>Notifications</h2> 
+        <div id="notification-counter">3</div>
+      </div>
+      <a href="#" onclick="readAll(); return false;"> Mark all as read </a>
+    </div>
+
+    <div class="single-notification unread">
+      <img src="assets/images/avatar-mark-webber.webp">
+      <div class="details-container">
+        <span class="user-name">Mark Webber</span>
+        <span class="user-action">reacted to your recent post</span>
+        <a class="link-post" href="#">My first tournament today!</a>
+        <span id="unread-symbol" class="">•</span>
+        <p class="user-action-date">1m ago</p>
+      </div>
+    </div>
+
+    <div class="single-notification unread">
+      <img src="assets/images/avatar-angela-gray.webp">
+      <div class="details-container">
+        <span class="user-name">Angela Gray</span>
+        <span class="user-action">followed you</span>
+        <span id="unread-symbol" class="">•</span>
+        <p class="user-action-date">5m ago</p>
+      </div>
+    </div>
+
+    <div class="single-notification unread">
+      <img src="assets/images/avatar-jacob-thompson.webp">
+      <div  class="details-container">
+        <span class="user-name">Jacob Thompson</span>
+        <span class="user-action">has joined your group <a class="link-group" href="#">Chess Club</a></span>
+        <span id="unread-symbol" class="">•</span>
+        <p class="user-action-date">1 day ago</p>
+      </div>
+    </div>
+
+    <div class="single-notification">
+      <img src="assets/images/avatar-rizky-hasanuddin.webp">
+      <div class="details-container">
+        <span class="user-name">Rizky Hasanuddin</span>
+        <span class="user-action">sent you a private message</span>
+        <span id="unread-symbol" class="invis">•</span>
+        <p class="user-action-date">5 days ago</p>
+    
+        <p class="message-details">
+          Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
+          I'm already having lots of fun and improving my game.
+        </p>
+      </div>
+    </div>
+
+    <div class="single-notification">
+      <img src="assets/images/avatar-kimberly-smith.webp">
+      <div class="details-container">
+        <span class="user-name">Kimberly Smith</span>
+        <span class="user-action">commented on your picture</span>
+        <span id="unread-symbol" class="invis">•</span>
+        <p class="user-action-date">1 week ago</p>
+      </div>
+      <img class="user-action-image" src="./assets/images/image-chess.webp"></img>
+    </div>
+
+    <div class="single-notification">
+      <img src="assets/images/avatar-nathan-peterson.webp">
+      <div class="details-container">
+        <span class="user-name">Nathan Peterso</span>
+        <span class="user-action">reacted to your recent post</span>
+        <a class="link-post" href="#">5 end-game strategies to increase your win rate</a>
+        <span id="unread-symbol" class="invis">•</span>
+        <p class="user-action-date"> 2 weeks ago</p>
+      </div>
+    </div>
+
+    <div class="single-notification">
+      <img src="assets/images/avatar-anna-kim.webp">
+      <div class="details-container">
+        <span class="user-name"> Anna Kim</span>
+        <span class="user-action">left the group Chess Club</span>
+        <span id="unread-symbol" class="invis">•</span>
+        <p class="user-action-date">2 weeks ago</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    <br> 
+    Coded by <a href="#">Lucas Löser</a>.
+  </div>
+
+<script defer src="script.js"></script>
+</body>
+</html>
