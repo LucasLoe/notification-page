@@ -139,6 +139,7 @@ span {
 }
 
 .message-details {
+    color: var(--dgb);
     border: 2px solid var(--lgb2);
     border-radius:  5px;
     padding: 15px;
